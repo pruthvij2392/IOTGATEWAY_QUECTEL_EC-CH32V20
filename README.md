@@ -63,4 +63,3 @@ IOTGATEWAY_V1/
 
 ## 👤 Author
 - **Developer**: Pruthvi Jyoti
-- **Organization**: SWASEMI PVT LTD
