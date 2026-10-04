@@ -1,0 +1,41 @@
+; SWAIOTGATEWAY USB CDC Serial Driver Installation File
+; For CH32V20x USB CDC Virtual COM Port
+
+[Version]
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+DriverVer=09/22/2026,1.0.0.0
+CatalogFile=SWAIOTGATEWAY.cat
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64,NTx86,NTarm64
+
+[Standard.NTamd64]
+%DeviceName%=USBSer,USB\VID_1A86&PID_FE0C
+%DeviceName%=USBSer,USB\VID_1A86&PID_FE0C&MI_00
+
+[Standard.NTx86]
+%DeviceName%=USBSer,USB\VID_1A86&PID_FE0C
+%DeviceName%=USBSer,USB\VID_1A86&PID_FE0C&MI_00
+
+[Standard.NTarm64]
+%DeviceName%=USBSer,USB\VID_1A86&PID_FE0C
+%DeviceName%=USBSer,USB\VID_1A86&PID_FE0C&MI_00
+
+[USBSer.NT]
+Include=usbser.inf
+Needs=UsbserialInstall.NT
+
+[USBSer.NT.Services]
+Include=usbser.inf
+Needs=UsbserialInstall.NT.Services
+
+[USBSer.NT.HW]
+Include=usbser.inf
+Needs=UsbserialInstall.NT.HW
+
+[Strings]
+ManufacturerName="SWAIOT"
+DeviceName="SWAIOTGATEWAY"
